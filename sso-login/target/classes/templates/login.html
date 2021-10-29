@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Module</title>
+    <style type="text/css">
+        .login{
+            text-align:right;
+            background-color:#385370;
+            width: 300px;height: 240px;
+            line-height: 50px;
+            padding-right: 60px;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="login">
+    <h3>欢迎来到登陆界面</h3>
+    <p style="color:red" th:text="${session.msg}"></p>
+    <form action="/login" method="POST">
+        用户名：<input name="username" value=""><br/>
+        密码：<input name="password" value=""><br/>
+        <button type="submit">登录</button>
+    </form>
+</div>
+
+</body>
+</html>
